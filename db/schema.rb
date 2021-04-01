@@ -13,9 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_04_01_115539) do
 
   create_table "prices", force: :cascade do |t|
-    t.integer "grade", null: false
-    t.datetime "start_day_at", null: false
-    t.datetime "finish_day_at", null: false
+    t.text "grade", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
