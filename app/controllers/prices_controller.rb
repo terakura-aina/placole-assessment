@@ -4,6 +4,8 @@ class PricesController < ApplicationController
   end
 
   def result
+    @start_day_at = start_day_at
+    @finish_day_at = finish_day_at
     # 何分差があるか
     use = (finish_day_at - start_day_at).to_i / 60 # /60で秒換算を分換算に変更
     if params[:grade] == "BASIC"
