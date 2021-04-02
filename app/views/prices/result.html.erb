@@ -1,13 +1,18 @@
-<br class="d-none d-sm-block">
-<h1 class="text-dark">シミュレーション結果</h1>
-<br class="d-none d-sm-block">
-<h4 class="text-dark">
-  <%= "#{@start_day_at.strftime("%Y年%m月%d日 %H:%M")}から"%>
+<div class="car">
   <br class="d-none d-sm-block">
-  <%= "#{@finish_day_at.strftime("%Y年%m月%d日 %H:%M")}のご利用金額は" %>
+  <h1 class="text-dark">シミュレーション結果</h1>
   <br class="d-none d-sm-block">
-</h4>
-<h2 class="text-dark">
+  <h4 class="text-dark">
+    <%= "#{@start_day_at.strftime("%Y年%m月%d日 %H:%M")}から"%>
+    <br class="d-none d-sm-block">
+    <%= "#{@finish_day_at.strftime("%Y年%m月%d日 %H:%M")}のご利用金額は" %>
+    <br class="d-none d-sm-block">
+  </h4>
+  <h2 class="text-dark">
+    <br class="d-none d-sm-block">
+    <%= "#{@time.to_s(:delimited)}円です" %>
+  </h2>
   <br class="d-none d-sm-block">
-  <%= "#{@time.to_s(:delimited)}円です" %>
-</h2>
+  <br class="d-none d-sm-block">
+  <br class="d-none d-sm-block">
+</div>

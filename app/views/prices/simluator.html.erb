@@ -1,23 +1,26 @@
-<br class="d-none d-sm-block">
-<h1 class="text-dark">カーシェアリング料金シミュレーション</h1>
-
-<%= form_with(url: result_path, method: :get, local: true) do |f| %>
-  <div class="form-group">
-    <br class="d-none d-sm-block">
-    <%= f.label :grade, :グレード %>
-    <%= f.collection_select :grade, Price.all, :grade, :grade %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :start_day_at, :いつから %>
-    <%= f.datetime_select :start_day_at, date_separator: '/', use_month_numbers: true, :minute_step => 15,:default => Time.now + 1.hours %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :finish_day_at, :いつまで %>
-    <%= f.datetime_select :finish_day_at, date_separator: '/', use_month_numbers: true, :minute_step => 15,:default => Time.now + 1.hours %>
-  </div>
-
+<div class="car">
   <br class="d-none d-sm-block">
-  <%= f.submit :シミュレーションする, class: 'btn btn-primary' %>
-<% end %>
+  <h1 class="text-dark">カーシェアリング料金シミュレーション</h1>
+
+  <%= form_with(url: result_path, method: :get, local: true) do |f| %>
+    <div class="form-group">
+      <br class="d-none d-sm-block">
+      <%= f.label :grade, :グレード %>
+      <%= f.collection_select :grade, Price.all, :grade, :grade %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :start_day_at, :いつから %>
+      <%= f.datetime_select :start_day_at, date_separator: '/', use_month_numbers: true, :minute_step => 15,:default => Time.now + 1.hours %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :finish_day_at, :いつまで %>
+      <%= f.datetime_select :finish_day_at, date_separator: '/', use_month_numbers: true, :minute_step => 15,:default => Time.now + 1.hours %>
+    </div>
+
+    <br class="d-none d-sm-block">
+    <%= f.submit :シミュレーションする, class: 'btn btn-primary' %>
+  <% end %>
+  <br class="d-none d-sm-block">
+</div>

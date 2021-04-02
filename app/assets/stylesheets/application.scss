@@ -12,3 +12,10 @@
  *
  */
 @import "bootstrap";
+
+.car {
+  background-image: url("/images/car.png");
+  background-position: right 20% bottom 150%;
+	background-repeat: no-repeat;
+	background-size: 60% auto;
+}
